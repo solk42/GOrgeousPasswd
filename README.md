@@ -1,0 +1,2 @@
+# GOrgeousPasswd
+simple golang project
