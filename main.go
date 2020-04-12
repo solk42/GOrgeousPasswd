@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 func main() {
@@ -19,6 +20,10 @@ func generatePassword(minLength int, numSpecialChars int, numDigits int) string 
 }
 
 func getRandomString(length int) string {
+	// rand seed setting on each call
+	rand.Seed(time.Now().UTC().UnixNano())
+
+	// generate random string of defined charlist
 	var basicChars = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
 	var bacisCharsLength = len(basicChars)
 	generated := make([]rune, length)
