@@ -24,6 +24,7 @@ A little diary of my first steps with go.
 | 09:06:51 | Well. First I'll need some coffee. Then I'll have a look at slice handling in go<br>**Summary:** Planning to getting it to work, after that I'll need to cleanup (Hopefully I will have a better understanding of go then) | 
 | 09:29:09 | :coffee: :coffee: :coffee:<br>brain is booting, do not turn off | 
 | 10:13:38 | Basic solution for TASK-01-01 done.<br>Really need to cleanup my mess :-/<br>Later I'll need to get into go packages. | 
+| 11:57:08 | One simple step done - moved helper function to separate package.<br>But general unsure if this is the right approach (folder and import structure) | 
 
 ---  
  
