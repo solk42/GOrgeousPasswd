@@ -26,6 +26,8 @@ A little diary of my first steps with go.
 | 10:13:38 | Basic solution for TASK-01-01 done.<br>Really need to cleanup my mess :-/<br>Later I'll need to get into go packages. | 
 | 11:57:08 | One simple step done - moved helper function to separate package.<br>But general unsure if this is the right approach (folder and import structure) | 
 | 12:29:21 | Moved configuration to generator package - I guess I'll need to refactor again..<br>**Summary:** Strategy: Learning by doing. Trying to clean up step by step | 
+| 16:08:09 | Took a little break :bath: :game_die:<br>Some ideas of go get a little clearer. I'll try to cleanup the generator code until midday tomorrow to get TASK-01-01 done. | 
+| 16:40:06 | Moved the generator functions to the generator package.<br>It gets a little cleaner.<br>Now I need to get into public/private/accessibility logic of go and add some inline documentation (*go doc*?) for at least exported functions and structs | 
 
 ---  
  
