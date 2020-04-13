@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"math/rand"
 	"time"
+
+	dlh "GOrgeousPasswd/packages/dirtylittlehelper"
 )
 
 func main() {
@@ -31,12 +33,6 @@ func generatePassword(minLength int, numSpecialChars int, numDigits int) string 
 	return string(generatedPassword)
 }
 
-// helper function to remove element of a slice
-func removeFromSlice(s []int, i int) []int {
-	s[i] = s[len(s)-1]
-	return s[:len(s)-1]
-}
-
 // random replacement of given options
 func replaceRandomString(basicValue []rune, characters string, numReplace int, replaceIndex []int) ([]rune, []int) {
 	// replace value setting
@@ -57,7 +53,7 @@ func replaceRandomString(basicValue []rune, characters string, numReplace int, r
 		// replace updatePassword on random index
 		updatePassword[replaceIndex] = replaceValue
 		// remove value from update index
-		updateIndex = removeFromSlice(updateIndex, listIndex)
+		updateIndex = dlh.RemoveFromSlice(updateIndex, listIndex)
 	}
 
 	return updatePassword, updateIndex
