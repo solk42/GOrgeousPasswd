@@ -6,6 +6,7 @@ import (
 	"time"
 
 	dlh "GOrgeousPasswd/packages/dirtylittlehelper"
+	pwgen "GOrgeousPasswd/packages/passwordgenerator"
 )
 
 func main() {
@@ -20,15 +21,14 @@ func main() {
 func generatePassword(minLength int, numSpecialChars int, numDigits int) string {
 	// generate random string of length minLength
 	// password Index is used to prevend override of already replaced chars
-	var generatedPassword, passwordIndex = getRandomString(minLength)
+	config := pwgen.NewPasswordConfig(minLength, numDigits, numSpecialChars)
+	var generatedPassword, passwordIndex = getRandomString(config.Length)
 
 	// replace digits
-	const replaceDigitChars = "0123456789"
-	generatedPassword, passwordIndex = replaceRandomString(generatedPassword, replaceDigitChars, numDigits, passwordIndex)
+	generatedPassword, passwordIndex = replaceRandomString(generatedPassword, config.Digits, config.NumDigits, passwordIndex)
 
 	// replace special chars
-	const replaceSpecialChars = "!§$%&/()=?#+*~-_.:,"
-	generatedPassword, passwordIndex = replaceRandomString(generatedPassword, replaceSpecialChars, numSpecialChars, passwordIndex)
+	generatedPassword, passwordIndex = replaceRandomString(generatedPassword, config.Special, config.NumSpecial, passwordIndex)
 
 	return string(generatedPassword)
 }

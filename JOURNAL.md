@@ -25,6 +25,7 @@ A little diary of my first steps with go.
 | 09:29:09 | :coffee: :coffee: :coffee:<br>brain is booting, do not turn off | 
 | 10:13:38 | Basic solution for TASK-01-01 done.<br>Really need to cleanup my mess :-/<br>Later I'll need to get into go packages. | 
 | 11:57:08 | One simple step done - moved helper function to separate package.<br>But general unsure if this is the right approach (folder and import structure) | 
+| 12:29:21 | Moved configuration to generator package - I guess I'll need to refactor again..<br>**Summary:** Strategy: Learning by doing. Trying to clean up step by step | 
 
 ---  
  
