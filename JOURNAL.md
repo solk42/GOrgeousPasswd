@@ -15,3 +15,15 @@ A little diary of my first steps with go.
 | 17:03:39 | well... generating a not really random string works - need to lookup how to generate it more realrandomly :-/ | 
 | 17:09:09 | that was easy - added rand.Seed with time function on each call.<br>**Summary:** First babystep of TASK-01-01 done, will continue later or tomorrow | 
 | 17:49:30 | added a simple diary file from my (quick and dirty) coded PHP diary-note ;) | 
+
+---  
+ 
+## Day 2 - 2020-04-13
+| time | message |
+|-|-|
+| 09:06:51 | Well. First I'll need some coffee. Then I'll have a look at slice handling in go<br>**Summary:** Planning to getting it to work, after that I'll need to cleanup (Hopefully I will have a better understanding of go then) | 
+| 09:29:09 | :coffee: :coffee: :coffee:<br>brain is booting, do not turn off | 
+| 10:13:38 | Basic solution for TASK-01-01 done.<br>Really need to cleanup my mess :-/<br>Later I'll need to get into go packages. | 
+
+---  
+ 
