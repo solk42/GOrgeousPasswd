@@ -6,19 +6,27 @@ import (
 	"time"
 )
 
+// PasswordGenerator struct holding general functions and basic password generation information
 type PasswordGenerator struct {
-	config        PasswordConfig
+	config        passwordConfig
 	password      []rune
 	passwordIndex []int
 }
 
+// NewPasswordGenerator - constructor
+// create a new password generator for a defined password structure, e. g.:
+//  NewPasswordGenerator(8, 2, 2)
+// will create and configure a generator for a 8 character long password including 2 digits and 2 special chars
 func NewPasswordGenerator(minLength int, numDigits int, numSpecialChars int) PasswordGenerator {
 	var pwgen = PasswordGenerator{
-		config: NewPasswordConfig(minLength, numDigits, numSpecialChars),
+		config: newPasswordConfig(minLength, numDigits, numSpecialChars),
 	}
 	return pwgen
 }
 
+// PasswordGenerator.GeneratePassword creates a new random password matching the defined password generator configuration, e. g.:
+//  NewPasswordGenerator(8, 2, 2).GeneratePassword()
+// could return a password like Le7§X(8P
 func (pwgen *PasswordGenerator) GeneratePassword() string {
 	rand.Seed(time.Now().UTC().UnixNano())
 	pwgen.generateBaseString()
@@ -47,16 +55,16 @@ func (pwgen *PasswordGenerator) replaceDigitChars() {
 }
 
 func (pwgen *PasswordGenerator) replaceRandomChar(charList []rune, count int) {
-	// Loop 0 to < numReplace
+	// Loop for replacing multi characters (count)
 	for i := 0; i < count; i++ {
-		// random char from replacer
+		// random char to set in password
 		var replaceValue = charList[rand.Intn(len(charList))]
-		// ramdom index from updateIndex
+		// random index from unchanged password chars
 		var listIndex = rand.Intn(len(pwgen.passwordIndex))
 		var replaceIndexValue = pwgen.passwordIndex[listIndex]
-		// replace updatePassword on random index
+		// replace password character
 		pwgen.password[replaceIndexValue] = replaceValue
-		// remove value from update index
+		// remove replaced char from list of replaceable password charindex
 		pwgen.passwordIndex = dlh.RemoveFromSlice(pwgen.passwordIndex, listIndex)
 	}
 }
