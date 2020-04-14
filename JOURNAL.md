@@ -32,3 +32,10 @@ A little diary of my first steps with go.
 
 ---  
  
+## Day 3 - 2020-04-14
+| time | message |
+|-|-|
+| 10:28:44 | **Summary: TASK-01-01 is done** :tada: :balloon:<br>Decided to **work without branches** because I work alone anyway. :grimacing:<br>For the defined tasks I will use tags after completion and maybe add links to the tasks list file (later) | 
+
+---  
+ 
