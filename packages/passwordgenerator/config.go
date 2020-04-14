@@ -1,16 +1,16 @@
+// Package passwordgenerator provides all required functions to generate random passwords by configuration options
 package passwordgenerator
 
-// Available string characters used for basic password generation
-const DefaultCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-// Available characters for number replacements
-const DefaultDigits = "0123456789"
-
-// Available special characters for replacements
-const DefaultSpecialChars = "!§$%&/()=?#+*~-_.:,"
-
-// Definition of minimum length of a password generated
-const DefaultMinLength = 4
+const (
+	// Available string characters used for basic password generation
+	DefaultCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	// Available characters for number replacements
+	DefaultDigits = "0123456789"
+	// Available special characters for replacements
+	DefaultSpecialChars = "!§$%&/()=?#+*~-_.:,"
+	// Definition of minimum length of a password generated
+	DefaultMinLength = 4
+)
 
 type passwordConfig struct {
 	Chars      []rune
